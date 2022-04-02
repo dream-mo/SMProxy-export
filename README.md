@@ -14,6 +14,10 @@ docker-compose up -d --build
 
 curl localhost:9137/metrics
 ```
+# Grafana Dasbord
+
+view grafana-smproxy-dashbord.json or import dashbord id: 【16036】 [dashbord](https://grafana.com/grafana/dashboards/16036)
+
 
 # implementation principle
 
