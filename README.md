@@ -1,11 +1,11 @@
-# smproxy-export
+# SMProxy-export
 Prometheus export of SMproxy database connection pool.
 
 SMProxy 数据库连接池 promethues exporter.
 
 SMProxy project github: [smproxy](git@github.com:dream-mo/SMProxy-export.git)
 
-# how to use
+# How to use
 
 ```shell
 git clone git@github.com:dream-mo/smproxy-export.git
@@ -20,7 +20,7 @@ view grafana-smproxy-dashbord.json or import dashbord id: 【16036】 [dashbord]
 
 ![dashbord](https://github.com/dream-mo/SMProxy-export/blob/main/SMProxy-dashbord-show.png)
 
-# implementation principle
+# Implementation principle
 
 PHP(index.php) exec shell_exec SMPorxy command get metrics.
 
@@ -29,7 +29,7 @@ PHP(index.php) exec shell_exec SMPorxy command get metrics.
 /usr/local/SMProxy status
 ```
 
-# metrics
+# Metrics
 ```html
 # HELP php_info Information about the PHP environment.
 # TYPE php_info gauge
