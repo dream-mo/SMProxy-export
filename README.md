@@ -18,6 +18,7 @@ curl localhost:9137/metrics
 
 view grafana-smproxy-dashbord.json or import dashbord id: 【16036】 [dashbord](https://grafana.com/grafana/dashboards/16036)
 
+![dashbord](https://github.com/dream-mo/SMProxy-export/blob/main/SMProxy-dashbord-show.png)
 
 # implementation principle
 
