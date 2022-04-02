@@ -1,0 +1,13 @@
+version: "3"
+services:
+
+  sp:
+    build:
+      context: .
+    restart: always
+    ports:
+    - 3366:3366
+    - 9137:9137
+    volumes:
+      - "./docker/smproxy/conf:/usr/local/smproxy/conf"
+      - "./docker/smproxy/logs:/usr/local/smproxy/logs"
