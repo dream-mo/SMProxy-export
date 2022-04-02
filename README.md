@@ -3,7 +3,7 @@ Prometheus export of SMproxy database connection pool.
 
 SMProxy 数据库连接池 promethues exporter.
 
-SMProxy project github: [smproxy](https://github.com/louislivi/SMProxy)
+SMProxy project github: [smproxy](git@github.com:dream-mo/SMProxy-export.git)
 
 # how to use
 
