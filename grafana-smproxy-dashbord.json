@@ -1,4 +1,52 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "7.5.15"
+    },
+    {
+      "type": "panel",
+      "id": "grafana-piechart-panel",
+      "name": "Pie Chart",
+      "version": "1.6.2"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -15,8 +63,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 50,
-  "iteration": 1648889498280,
+  "id": null,
+  "iteration": 1648889882059,
   "links": [],
   "panels": [
     {
@@ -87,7 +135,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "Prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "editable": true,
       "error": false,
@@ -117,12 +165,10 @@
       "mappingType": 1,
       "mappingTypes": [
         {
-          "$$hashKey": "object:239",
           "name": "value to text",
           "value": 1
         },
         {
-          "$$hashKey": "object:240",
           "name": "range to text",
           "value": 2
         }
@@ -169,7 +215,6 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
-          "$$hashKey": "object:242",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -186,7 +231,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "Prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "editable": true,
       "error": false,
@@ -216,12 +261,10 @@
       "mappingType": 1,
       "mappingTypes": [
         {
-          "$$hashKey": "object:239",
           "name": "value to text",
           "value": 1
         },
         {
-          "$$hashKey": "object:240",
           "name": "range to text",
           "value": 2
         }
@@ -268,7 +311,6 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
-          "$$hashKey": "object:242",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -420,7 +462,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:133",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -429,7 +470,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:134",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -517,7 +557,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:380",
           "format": "s",
           "label": null,
           "logBase": 1,
@@ -526,7 +565,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:381",
           "format": "s",
           "label": null,
           "logBase": 1,
@@ -549,13 +587,8 @@
     "list": [
       {
         "allValue": null,
-        "current": {
-          "isNone": true,
-          "selected": false,
-          "text": "None",
-          "value": ""
-        },
-        "datasource": null,
+        "current": {},
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(sp_swoole_version, instance)",
         "description": "",
         "error": null,
@@ -564,19 +597,12 @@
         "label": null,
         "multi": false,
         "name": "instance",
-        "options": [
-          {
-            "isNone": true,
-            "selected": true,
-            "text": "None",
-            "value": ""
-          }
-        ],
+        "options": [],
         "query": {
           "query": "label_values(sp_swoole_version, instance)",
           "refId": "StandardVariableQuery"
         },
-        "refresh": 0,
+        "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
@@ -588,13 +614,8 @@
       },
       {
         "allValue": null,
-        "current": {
-          "isNone": true,
-          "selected": false,
-          "text": "None",
-          "value": ""
-        },
-        "datasource": null,
+        "current": {},
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(sp_db_max_connection,db)",
         "description": null,
         "error": null,
@@ -603,19 +624,12 @@
         "label": null,
         "multi": false,
         "name": "db",
-        "options": [
-          {
-            "isNone": true,
-            "selected": true,
-            "text": "None",
-            "value": ""
-          }
-        ],
+        "options": [],
         "query": {
           "query": "label_values(sp_db_max_connection,db)",
           "refId": "StandardVariableQuery"
         },
-        "refresh": 0,
+        "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
@@ -633,7 +647,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "SMProxy",
-  "uid": "rv0EKyynz",
+  "title": "SMProxy dashbord",
+  "uid": "rv0EKyynzxx",
   "version": 2
 }
