@@ -8,10 +8,18 @@ SMProxy project github: [smproxy](git@github.com:dream-mo/SMProxy-export.git)
 # How to use
 
 ```shell
+# git clone
 git clone git@github.com:dream-mo/smproxy-export.git
 
+# change your database and server config
+cd docker/smproxy/conf/
+cp database.json.example database.json
+cp server.json.example server.json
+
+# run docker-compose
 docker-compose up -d --build
 
+# test metrics
 curl localhost:9137/metrics
 ```
 # Grafana Dasbord
